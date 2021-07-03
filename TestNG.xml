@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="YahooMail">
+
+
+	<listeners>
+		<listener class-name="com.YahooMail.utilities.Reporting" />
+	</listeners>
+
+	<test name="YahooMail">
+
+
+
+
+
+		<parameter name="browser" value="chrome" />
+		<classes>
+ 
+
+	  <class name="com.YahooMail.testCases.TC_Testing_01" />  
+
+	  
+  
+  
+		  
+		</classes>
+	
+	</test>
+
+</suite>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-07-03T21:59:51 IST" name="YahooMail" finished-at="2021-07-03T22:05:43 IST" duration-ms="352079">
+    <groups>
+    </groups>
+    <test started-at="2021-07-03T21:59:51 IST" name="YahooMail" finished-at="2021-07-03T22:05:43 IST" duration-ms="352079">
+      <class name="com.YahooMail.testCases.TC_Testing_01">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.YahooMail.testCases.TC_Testing_01@50ad3bc1]" started-at="2021-07-03T21:59:51 IST" name="setup" finished-at="2021-07-03T21:59:53 IST" duration-ms="1746" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="Tesing_new(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.YahooMail.testCases.TC_Testing_01@50ad3bc1]" started-at="2021-07-03T21:59:54 IST" name="Tesing_new" data-provider="LoginData" finished-at="2021-07-03T22:01:35 IST" duration-ms="100662" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[nadimpalli81vq@yahoo.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Text@book]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Jersey]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Tesing_new -->
+        <test-method is-config="true" signature="settingBack()[pri:0, instance:com.YahooMail.testCases.TC_Testing_01@50ad3bc1]" started-at="2021-07-03T22:01:35 IST" name="settingBack" finished-at="2021-07-03T22:02:08 IST" duration-ms="32863" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- settingBack -->
+        <test-method signature="Tesing_new(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.YahooMail.testCases.TC_Testing_01@50ad3bc1]" started-at="2021-07-03T22:02:08 IST" name="Tesing_new" data-provider="LoginData" finished-at="2021-07-03T22:05:09 IST" duration-ms="181203" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[mudunuri99sv@yahoo.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Text@book]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Uzbekistan]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //*[@id="mail-app-component"]/div[2]/div[1] (tried for 30 second(s) with 500 milliseconds interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //*[@id="mail-app-component"]/div[2]/div[1] (tried for 30 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:138)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+at com.YahooMail.pageObjects.LoginMailPage.skipMessenger(LoginMailPage.java:108)
+at com.YahooMail.testCases.BaseClass.logingMail(BaseClass.java:228)
+at com.YahooMail.testCases.TC_Testing_01.Tesing_new(TC_Testing_01.java:25)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="mail-app-component"]/div[2]/div[1]"}
+  (Session info: chrome=91.0.4472.124)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '4.0.0-alpha-3', revision: '8c567de6dc'
+System info: host: 'DESKTOP-P7HOIIK', ip: '10.71.0.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\KONDAV~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:59698}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a8d1771e1d3b7f51256b1f3c82f4d872
+*** Element info: {Using=xpath, value=//*[@id="mail-app-component"]/div[2]/div[1]}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:191)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:125)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:576)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:445)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:396)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)
+at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:641)
+at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:638)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:211)
+... 31 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Tesing_new -->
+        <test-method is-config="true" signature="settingBack()[pri:0, instance:com.YahooMail.testCases.TC_Testing_01@50ad3bc1]" started-at="2021-07-03T22:05:10 IST" name="settingBack" finished-at="2021-07-03T22:05:42 IST" duration-ms="32871" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- settingBack -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.YahooMail.testCases.TC_Testing_01@50ad3bc1]" started-at="2021-07-03T22:05:42 IST" name="tearDown" finished-at="2021-07-03T22:05:43 IST" duration-ms="313" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.YahooMail.testCases.TC_Testing_01 -->
+    </test> <!-- YahooMail -->
+  </suite> <!-- YahooMail -->
+</testng-results>

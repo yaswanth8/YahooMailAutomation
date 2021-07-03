@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [YahooMail]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.YahooMail.utilities.Reporting"/>
+  </listeners>
+  <test thread-count="5" name="YahooMail(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.YahooMail.testCases.TC_Testing_01">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="settingBack"/>
+          <include name="Tesing_new" invocation-numbers="1"/>
+        </methods>
+      </class> <!-- com.YahooMail.testCases.TC_Testing_01 -->
+    </classes>
+  </test> <!-- YahooMail(failed) -->
+</suite> <!-- Failed suite [YahooMail] -->
