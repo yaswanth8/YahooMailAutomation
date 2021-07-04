@@ -10,7 +10,6 @@
 
 	<test name="YahooMail">
 
-
 		<parameter name="browser" value="chrome" />
 		<classes>
  
