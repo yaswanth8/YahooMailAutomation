@@ -11,9 +11,6 @@
 	<test name="YahooMail">
 
 
-
-
-
 		<parameter name="browser" value="chrome" />
 		<classes>
  
@@ -21,9 +18,6 @@
 	  <class name="com.YahooMail.testCases.TC_Testing_01" />  
 
 	  
-  
-  
-		  
 		</classes>
 	
 	</test>
