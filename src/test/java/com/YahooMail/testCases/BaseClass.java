@@ -42,7 +42,6 @@ public class BaseClass {
 	public static String cityName;
 	public static String browserName;
 
-
 	public static WebDriver driver;
 	public static Logger logger;
 
