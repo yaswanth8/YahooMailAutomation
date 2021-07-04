@@ -13,7 +13,6 @@ public class TC_Testing_01 extends BaseClass{
 		userName=user;
 		cityName=city;
 
-
 		LoginMailPage lp=new LoginMailPage(driver);
 		//-------------------SET VPN-------------------//
 		
