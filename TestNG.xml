@@ -3,7 +3,6 @@
 
 <suite name="YahooMail">
 
-
 	<listeners>
 		<listener class-name="com.YahooMail.utilities.Reporting" />
 	</listeners>
@@ -11,6 +10,7 @@
 	<test name="YahooMail">
 		<parameter name="browser" value="chrome" />
 		<classes>
+		
  
 	  <class name="com.YahooMail.testCases.TC_Testing_01" />  
 
