@@ -146,29 +146,29 @@ public class TC_Testing extends BaseClass{
 
 
 	@AfterMethod
-	public void settingBack(ITestResult testResult) throws InterruptedException, IOException{
+	public void settingBack() throws InterruptedException, IOException{
 
-			if (testResult.getStatus() == ITestResult.FAILURE) { 
 			
-			captureScreen(driver, BaseClass.userName);
-			}
+			try{
 
-				try{
-
-				clearCacheChrome(7, 1); 
+				if(BaseClass.browserName.equals("chrome"))	
+					{
 					
-			//	clearCacheFirefox(10,2);
-				
-				logger.info("User Cache Cleared");
+						clearCacheChrome(7, 1);
+					}	
+				if(BaseClass.browserName.equals("firefox"))	
+					{	
+					clearCacheFirefox(10,2);
 
-					}	catch(Exception e)	{
-						
+					}
+			}
+				catch(Exception e){
 							logger.info("Failed in Cache Cleared");
-								}
+					}
 			
 				closeVpn();
 	
-				Thread.sleep(30000);
+				Thread.sleep(25000);
 
 
 			}
