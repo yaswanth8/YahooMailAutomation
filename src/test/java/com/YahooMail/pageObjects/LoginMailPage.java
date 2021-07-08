@@ -46,7 +46,9 @@ String btnApplynow_partialLinkText ="Apply Now";
 
 String btnKnowMore_partialLinkText ="Know More";
 
-String btnReadMore_partialLinkText ="Read More";
+String btnKNOWMore_partialLinkText ="KNOW MORE";
+
+String btnREADMore_partialLinkText ="READ MORE";
 
 String btnProfile_xpath="/html/body/header/div/div/div[2]/div/div[3]/div[1]/div/label/div/img";
 
@@ -146,11 +148,18 @@ wait.until(ExpectedConditions.elementToBeClickable(By.partialLinkText(btnKnowMor
 ldriver.findElement(By.partialLinkText(btnKnowMore_partialLinkText)).click();
 }
 
-public void clickReadMore(int sec) {
+public void clickREADMore(int sec) {
 
 WebDriverWait wait = new WebDriverWait(ldriver, Duration.ofSeconds(sec));
-wait.until(ExpectedConditions.elementToBeClickable(By.partialLinkText(btnReadMore_partialLinkText)));
-ldriver.findElement(By.partialLinkText(btnReadMore_partialLinkText)).click();
+wait.until(ExpectedConditions.elementToBeClickable(By.partialLinkText(btnREADMore_partialLinkText)));
+ldriver.findElement(By.partialLinkText(btnREADMore_partialLinkText)).click();
+}
+
+public void clickKNOWMore(int sec) {
+
+WebDriverWait wait = new WebDriverWait(ldriver, Duration.ofSeconds(sec));
+wait.until(ExpectedConditions.elementToBeClickable(By.partialLinkText(btnKNOWMore_partialLinkText)));
+ldriver.findElement(By.partialLinkText(btnKNOWMore_partialLinkText)).click();
 }
 
 public void clickShowImage(int sec) {
