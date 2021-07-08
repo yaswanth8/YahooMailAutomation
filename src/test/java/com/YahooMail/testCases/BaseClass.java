@@ -289,7 +289,15 @@ public void logingMail(String user,String pwd) throws InterruptedException{
 			moveTofolder();
 		
 		}	
-		else{
+		else if(driver.findElements(By.partialLinkText("Read More")).size() > 0){
+			lp.clickReadMore(30);
+			
+			defaulttab();
+			
+			moveTofolder();
+			
+		}
+		else {
 			moveTofolder();
 		}
 	}

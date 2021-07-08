@@ -46,6 +46,8 @@ String btnApplynow_partialLinkText ="Apply Now";
 
 String btnKnowMore_partialLinkText ="Know More";
 
+String btnReadMore_partialLinkText ="Read More";
+
 String btnProfile_xpath="/html/body/header/div/div/div[2]/div/div[3]/div[1]/div/label/div/img";
 
 String btnLogout_xpath="/html/body/header/div/div/div[2]/div/div[3]/div[1]/div/div/div/a[3]";
@@ -142,6 +144,13 @@ public void clickKnowMore(int sec) {
 WebDriverWait wait = new WebDriverWait(ldriver, Duration.ofSeconds(sec));
 wait.until(ExpectedConditions.elementToBeClickable(By.partialLinkText(btnKnowMore_partialLinkText)));
 ldriver.findElement(By.partialLinkText(btnKnowMore_partialLinkText)).click();
+}
+
+public void clickReadMore(int sec) {
+
+WebDriverWait wait = new WebDriverWait(ldriver, Duration.ofSeconds(sec));
+wait.until(ExpectedConditions.elementToBeClickable(By.partialLinkText(btnReadMore_partialLinkText)));
+ldriver.findElement(By.partialLinkText(btnReadMore_partialLinkText)).click();
 }
 
 public void clickShowImage(int sec) {

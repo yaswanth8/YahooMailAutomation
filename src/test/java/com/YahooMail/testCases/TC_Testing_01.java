@@ -29,14 +29,14 @@ public class TC_Testing_01 extends BaseClass{
 		lp.clickSpam(30);
 
 		driver.navigate().refresh();
-		driver.manage().timeouts().implicitlyWait(15,TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(25,TimeUnit.SECONDS);
 		
 		if(lp.emptyFolder()>0) {
 			logger.info(user+" : Spam Folder is Already Empty");
 		}
 		else {
 			
-			driver.manage().timeouts().implicitlyWait(25,TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 		// Spam mails More than 3
 		while(lp.moreThanThreeMails_check()>0){
 
@@ -99,14 +99,14 @@ public class TC_Testing_01 extends BaseClass{
 
 		driver.navigate().refresh();
 
-	driver.manage().timeouts().implicitlyWait(15,TimeUnit.SECONDS);
+	driver.manage().timeouts().implicitlyWait(25,TimeUnit.SECONDS);
 		
 		if(lp.emptyFolder()>0) {
 			logger.info(user+" : Inbox Folder is Already Empty");
 		}
 		else {
 			
-			driver.manage().timeouts().implicitlyWait(25,TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 			// Inbox More than 3 Mails
 			while(lp.moreThanThreeMails_check() >0){
 	
