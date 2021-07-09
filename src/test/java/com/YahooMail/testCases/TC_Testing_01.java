@@ -98,6 +98,8 @@ public class TC_Testing_01 extends BaseClass{
 		lp.clickInbox(30);
 
 		driver.navigate().refresh();
+		
+		Thread.sleep(3000);
 
 	driver.manage().timeouts().implicitlyWait(25,TimeUnit.SECONDS);
 		
