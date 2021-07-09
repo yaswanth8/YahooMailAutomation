@@ -12,7 +12,7 @@
 		<classes>
 		
  
-	  <class name="com.YahooMail.testCases.TC_Testing_01" />  
+		  <class name="com.YahooMail.testCases.TC_Testing_01" />  
 
 		</classes>
 	
