@@ -24,7 +24,8 @@ public class TC_Testing_01 extends BaseClass{
 		logingMail(user,pwd);
 		logger.info(user+" logged to city : "+city);
 		
-				
+		Thread.sleep(3000);
+		
 		//-------------------SPAM FOLDER -------------------//
 		lp.clickSpam(30);
 
