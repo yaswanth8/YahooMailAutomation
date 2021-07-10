@@ -24,7 +24,7 @@ public class TC_Testing_01 extends BaseClass{
 		logingMail(user,pwd);
 		logger.info(user+" logged to city : "+city);
 		
-		Thread.sleep(3000);
+		
 		
 		//-------------------SPAM FOLDER -------------------//
 		lp.clickSpam(30);
@@ -32,6 +32,7 @@ public class TC_Testing_01 extends BaseClass{
 		driver.navigate().refresh();
 		driver.manage().timeouts().implicitlyWait(25,TimeUnit.SECONDS);
 		
+               Thread.sleep(3000);
 		if(lp.emptyFolder()>0) {
 			logger.info(user+" : Spam Folder is Already Empty");
 		}
