@@ -7,7 +7,7 @@ import com.YahooMail.pageObjects.LoginMailPage;
 
 public class TC_Testing_01 extends BaseClass{
 
-	@Test(dataProvider="LoginData")
+	@Test(dataProvider="LoginData",retryAnalyzer = com.YahooMail.utilities.Retry.class)
 	public void Tesing_new(String user,String pwd,String city) throws InterruptedException{
 	
 		userName=user;
