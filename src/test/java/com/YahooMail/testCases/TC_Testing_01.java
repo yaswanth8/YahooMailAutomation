@@ -30,9 +30,10 @@ public class TC_Testing_01 extends BaseClass{
 		lp.clickSpam(30);
 
 		driver.navigate().refresh();
-		driver.manage().timeouts().implicitlyWait(25,TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(15,TimeUnit.SECONDS);
 		
-               Thread.sleep(3000);
+        Thread.sleep(3000);
+        
 		if(lp.emptyFolder()>0) {
 			logger.info(user+" : Spam Folder is Already Empty");
 		}
@@ -103,7 +104,7 @@ public class TC_Testing_01 extends BaseClass{
 		
 		Thread.sleep(3000);
 
-	driver.manage().timeouts().implicitlyWait(25,TimeUnit.SECONDS);
+	driver.manage().timeouts().implicitlyWait(15,TimeUnit.SECONDS);
 		
 		if(lp.emptyFolder()>0) {
 			logger.info(user+" : Inbox Folder is Already Empty");
