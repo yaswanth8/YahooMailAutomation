@@ -7,6 +7,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.mail.EmailException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestContext;
@@ -27,14 +28,14 @@ public class Reporting extends TestListenerAdapter
 	public ExtentHtmlReporter htmlReporter;
 	public ExtentReports extent;
 	public ExtentTest logger;
-	
+	sendMail mail=new sendMail();
 		
 	public void onStart(ITestContext testContext)
 	{
 		String timeStamp = new SimpleDateFormat("dd.MM.yyyy.HH.mm.ss").format(new Date());//time stamp
-		String repName="Report_"+timeStamp+".html";
+		 BaseClass.repName="Report_"+timeStamp+".html";
 		
-		htmlReporter=new ExtentHtmlReporter(System.getProperty("user.dir")+ "/test-output/"+repName);//specify location of the report
+		htmlReporter=new ExtentHtmlReporter(System.getProperty("user.dir")+ "/test-output/"+BaseClass.repName);//specify location of the report
 		htmlReporter.loadXMLConfig(System.getProperty("user.dir")+ "/extent-config.xml");
 		
 		extent=new ExtentReports();
@@ -62,9 +63,13 @@ public class Reporting extends TestListenerAdapter
 		logger.log(Status.FAIL,MarkupHelper.createLabel(BaseClass.cityName,ExtentColor.RED)); // send the passed information to the report with GREEN colour highlighted
 		try {
 			takeScreenshot();
+			mail.sendNormalMail("Failed");
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
+		} catch (EmailException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		
 	}
@@ -75,6 +80,7 @@ public class Reporting extends TestListenerAdapter
 		logger.log(Status.SKIP,MarkupHelper.createLabel(BaseClass.cityName,ExtentColor.ORANGE));
 		try {
 			takeScreenshot();
+		//	mail.sendNormalMail("Skipped");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -83,7 +89,15 @@ public class Reporting extends TestListenerAdapter
 	
 	public void onFinish(ITestContext testContext)
 	{
+		
 		extent.flush();
+		
+		try {
+			mail.sendAttachment();
+		} catch (EmailException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	public void takeScreenshot() throws IOException

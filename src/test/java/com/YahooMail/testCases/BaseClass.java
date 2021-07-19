@@ -41,6 +41,7 @@ public class BaseClass {
 	public static String userName;
 	public static String cityName;
 	public static String browserName;
+	public static String repName;
 
 	public static WebDriver driver;
 	public static Logger logger;
