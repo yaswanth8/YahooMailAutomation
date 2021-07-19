@@ -22,7 +22,7 @@ public class sendMail {
 	email.setSmtpPort(465);
 	email.setAuthenticator(new DefaultAuthenticator(gmailID,gmailPwd));
 	email.setSSLOnConnect(true);
-	email.setFrom(gmailID,BaseClass.userName);
+	email.setFrom(gmailID, "Yahoo Automation");
 	email.setSubject(BaseClass.userName+" || "+"City : "+BaseClass.cityName);
 	email.setMsg(BaseClass.userName+" || "+"City : "+BaseClass.cityName);
 	email.setMsg(BaseClass.userName+" || "+"City : "+BaseClass.cityName+" is "+status);
