@@ -13,7 +13,7 @@ public class sendMail {
 	
 	String gmailID="xyz@gmail.com";
 	String gmailPwd="xyz";	
-	String ToMailaddress="vamsi.4123@gmail.com";
+	String[] recipients={"vamsi.4123@gmail.com","vikasnaidu15@gmail.com","saireddy26@gmail.com"};
 
 	public void sendNormalMail(String status) throws EmailException
 	{
@@ -26,7 +26,10 @@ public class sendMail {
 	email.setSubject(BaseClass.userName+" || "+"City : "+BaseClass.cityName);
 	email.setMsg(BaseClass.userName+" || "+"City : "+BaseClass.cityName);
 	email.setMsg(BaseClass.userName+" || "+"City : "+BaseClass.cityName+" is "+status);
-	email.addTo(ToMailaddress);
+	for(int i=0;i<recipients.length;i++)
+	{
+		email.addTo(recipients[i]);
+	}	
 	email.setBounceAddress("vamsi.4123@gmail.com");
 	email.send();
 	}
@@ -44,7 +47,10 @@ public class sendMail {
 		  email.setSmtpPort(465);
 		  email.setAuthenticator(new DefaultAuthenticator(gmailID,gmailPwd));
 		  email.setSSLOnConnect(true);
-		  email.addTo(ToMailaddress);
+		  for(int i=0;i<recipients.length;i++)
+			{
+				email.addTo(recipients[i]);
+			}	
 		  email.setFrom(gmailID, "Yahoo Automation Report");
 		  email.setSubject(BaseClass.repName);
 		  email.setMsg(" Final E2E Report ");
