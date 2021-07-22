@@ -34,6 +34,8 @@ public class TC_Testing_01 extends BaseClass{
 		
         Thread.sleep(3000);
         
+        alertClose();
+        
 		if(lp.emptyFolder()>0) {
 			logger.info(user+" : Spam Folder is Already Empty");
 		}
@@ -42,6 +44,8 @@ public class TC_Testing_01 extends BaseClass{
 			driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 		// Spam mails More than 3
 		while(lp.moreThanThreeMails_check()>0){
+			
+						alertClose();
 
 						lp.moreThanThreeMails_click(30);
 
@@ -88,10 +92,12 @@ public class TC_Testing_01 extends BaseClass{
 						Thread.sleep(1000);
 						alertClose();
 
-					}	
+					
 
 
 		logger.info(user+" : All Spam mails are moved to Inbox");
+		
+		}
 
 		}
 
@@ -103,8 +109,10 @@ public class TC_Testing_01 extends BaseClass{
 		driver.navigate().refresh();
 		
 		Thread.sleep(3000);
+		
+		alertClose();
 
-	driver.manage().timeouts().implicitlyWait(15,TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(15,TimeUnit.SECONDS);
 		
 		if(lp.emptyFolder()>0) {
 			logger.info(user+" : Inbox Folder is Already Empty");
@@ -149,9 +157,11 @@ public class TC_Testing_01 extends BaseClass{
 				alertClose();
 	
 	
-				}
+				
 	
 					logger.info(user+" : All Inbox mails are read");
+					
+			}		
 					
 		}		
 
