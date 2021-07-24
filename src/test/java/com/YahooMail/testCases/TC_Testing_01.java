@@ -59,11 +59,12 @@ public class TC_Testing_01 extends BaseClass{
 						alertClose();
 						lp.clickNotSpam(30);
 						
-						alertClose();
+						
 						Thread.sleep(1000);
+						alertClose();
 						
 						driver.navigate().refresh();
-						Thread.sleep(1000);
+						Thread.sleep(2000);
 						alertClose();
 
 					}
@@ -85,11 +86,12 @@ public class TC_Testing_01 extends BaseClass{
 						alertClose();
 						lp.clickNotSpam(30);
 						
-						alertClose();
+						
 						Thread.sleep(1000);
+						alertClose();
 						
 						driver.navigate().refresh();
-						Thread.sleep(1000);
+						Thread.sleep(2000);
 						alertClose();
 
 					
