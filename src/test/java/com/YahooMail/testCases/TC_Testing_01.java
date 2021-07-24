@@ -62,6 +62,7 @@ public class TC_Testing_01 extends BaseClass{
 						
 						Thread.sleep(1000);
 						alertClose();
+						Thread.sleep(1000);
 						
 						driver.navigate().refresh();
 						Thread.sleep(2000);
@@ -89,6 +90,7 @@ public class TC_Testing_01 extends BaseClass{
 						
 						Thread.sleep(1000);
 						alertClose();
+						Thread.sleep(1000);
 						
 						driver.navigate().refresh();
 						Thread.sleep(2000);
