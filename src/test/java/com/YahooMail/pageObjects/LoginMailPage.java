@@ -64,6 +64,8 @@ String moreThanThreeMails="//*[@id=\"mail-app-component\"]/div[1]/div/div[2]/div
 
 String lessThanThreeMails="//*[@id=\"mail-app-component\"]/div[1]/div/div[2]/div/div/div[2]/div/div[1]/ul/li[2]/a";
 
+String recaptchaForm="//*[@id=\"recaptchaForm\"]";
+
 public void clickSignin(int sec){
 
 WebDriverWait wait = new WebDriverWait(ldriver, Duration.ofSeconds(sec));

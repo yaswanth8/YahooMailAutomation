@@ -213,7 +213,18 @@ public void logingMail(String user,String pwd) throws InterruptedException{
 	
 	lp.clickNext(30);
 	
-	lp.setPassword(pwd,30);
+	if(driver.findElements(By.id("login-passwd")).size() > 0) {
+		lp.setPassword(pwd,30);
+	}
+	else {
+		
+		logger.info(user+" CHECK !!! I'm not a robot ");
+		Thread.sleep(60000);
+		
+		lp.setPassword(pwd,30);
+	}
+	
+	
 	logger.info("User Password : ********");
 	
 	lp.clickSubmit(30);

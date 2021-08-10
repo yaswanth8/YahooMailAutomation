@@ -11,7 +11,9 @@
 		<parameter name="browser" value="chrome" />
 		<classes>
 		
- 
+ <!-- TC_Testing_01 for Unspam all Mail 7 Read inbox-->
+  <!-- TC_Testing_02 for Login and logoff check-->
+  
 		  <class name="com.YahooMail.testCases.TC_Testing_01" />  
 
 		</classes>
