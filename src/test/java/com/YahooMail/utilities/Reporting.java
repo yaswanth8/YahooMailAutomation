@@ -63,13 +63,10 @@ public class Reporting extends TestListenerAdapter
 		logger.log(Status.FAIL,MarkupHelper.createLabel(BaseClass.cityName,ExtentColor.RED)); // send the passed information to the report with GREEN colour highlighted
 		try {
 			takeScreenshot();
-			mail.sendNormalMail("Failed");
+		//	mail.sendNormalMail("Failed");
 		} catch (IOException e1) {
-			// TODO Auto-generated catch block
+			
 			e1.printStackTrace();
-		} catch (EmailException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		}
 		
 	}
@@ -82,7 +79,7 @@ public class Reporting extends TestListenerAdapter
 			takeScreenshot();
 		//	mail.sendNormalMail("Skipped");
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 	}
@@ -92,12 +89,8 @@ public class Reporting extends TestListenerAdapter
 		
 		extent.flush();
 		
-		try {
-			mail.sendAttachment();
-		} catch (EmailException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		//	mail.sendAttachment();
+		
 	}
 	
 	public void takeScreenshot() throws IOException
