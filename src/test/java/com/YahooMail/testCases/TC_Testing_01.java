@@ -12,6 +12,8 @@ public class TC_Testing_01 extends BaseClass{
 	
 		userName=user;
 		cityName=city;
+		int spam_count=0,inbox_count=0;
+		
 
 		LoginMailPage lp=new LoginMailPage(driver);
 		//-------------------SET VPN-------------------//
@@ -45,6 +47,13 @@ public class TC_Testing_01 extends BaseClass{
 		// Spam mails More than 3
 		while(lp.moreThanThreeMails_check()>0){
 			
+						spam_count++;
+						
+						if(spam_count==Num_of_mails) {
+							logger.info("Spam mails target reached : "+spam_count+" mails");
+							break;
+						}
+			
 						alertClose();
 
 						lp.moreThanThreeMails_click(30);
@@ -74,6 +83,13 @@ public class TC_Testing_01 extends BaseClass{
 		// Spam mails less than 3
 
 		while(lp.lessThanThreeMails_check()>0){
+			
+						spam_count++;
+						
+						if(spam_count==Num_of_mails) {
+							logger.info("Spam mails target reached : "+spam_count+" mails");
+							break;
+						}
 
 						lp.lessThanThreeMails_click(30);
 						
@@ -126,6 +142,13 @@ public class TC_Testing_01 extends BaseClass{
 			driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 			// Inbox More than 3 Mails
 			while(lp.moreThanThreeMails_check() >0){
+				
+					inbox_count++;
+					
+					if(inbox_count==Num_of_mails) {
+						logger.info("inbox mails target reached : "+spam_count+" mails");
+						break;
+					}
 	
 					lp.moreThanThreeMails_click(30);
 	
@@ -146,6 +169,13 @@ public class TC_Testing_01 extends BaseClass{
 	
 			// Inbox less than 3 Mails
 			while(lp.lessThanThreeMails_check() >0){
+				
+				inbox_count++;
+				
+				if(inbox_count==Num_of_mails) {
+					logger.info("Inbox mails target reached : "+spam_count+" mails");
+					break;
+				}
 	
 				lp.lessThanThreeMails_click(30);
 				
