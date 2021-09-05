@@ -41,19 +41,20 @@ public class BaseClass {
 	public static String userName;
 	public static String cityName;
 	public static String browserName;
+	public static int Num_of_mails;
 	public static String repName;
 
 	public static WebDriver driver;
 	public static Logger logger;
 
 
-
-	@Parameters("browser")
+	@Parameters({"browser","number_of_mails"})
 	@BeforeClass
-	public void setup(String br){
+	public void setup(String br,int mails_conut){
 		logger=Logger.getLogger("Yahoo Mail");
 		PropertyConfigurator.configure("log4j.properties");
 		browserName=br;
+		Num_of_mails=mails_conut;
 		
 		if(br.equals("chrome")) {
 		
