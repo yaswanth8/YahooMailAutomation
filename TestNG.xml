@@ -8,11 +8,12 @@
 	</listeners>
 
 	<test name="YahooMail">
-		<parameter name="browser" value="chrome" />
+		<parameter name="browser" value="firefox" />
+		<parameter name="number_of_mails" value="3" />
 		<classes>
 		
- <!-- TC_Testing_01 for Unspam all Mail 7 Read inbox-->
-  <!-- TC_Testing_02 for Login and logoff check-->
+ 	<!-- TC_Testing_01 for Unspam all Mail 7 Read inbox-->
+ 	 <!-- TC_Testing_02 for Login and logoff check-->
   
 		  <class name="com.YahooMail.testCases.TC_Testing_01" />  
 
@@ -20,4 +21,4 @@
 	
 	</test>
 
-</suite>
+</suite>	
